@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-- sudo docker build -t dzung-min/react-docker -f Dockerfile.dev .
+- docker build -t dzung-min/react-docker -f Dockerfile.dev .
 
 script:
 - docker run -e CI=true dzung-min/react-docker npm run test
